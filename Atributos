@@ -1,6 +1,6 @@
-package petShop;
+package a3PetShop;
 
-public class Atributos extends Petshop {
+public class Atributos extends PetShop {
 	String nome, especie, raca;
 	String banho, tosa, vacina;
 	public int id, preco;
@@ -24,9 +24,11 @@ public class Atributos extends Petshop {
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getEspecie() {
 		return especie;
 	}
@@ -48,10 +50,13 @@ public class Atributos extends Petshop {
 	}
 
 	public void setBanho(int opcao) {
-		if(opcao == 70) {
-		this.banho = "70";
-		this.preco = preco + opcao;
-		}else {
+		if (opcao == 1) {
+			this.banho = "70";
+			this.preco = preco + 70;
+		}else if(opcao ==2){
+			this.banho = "110";
+			this.preco = preco + 110;
+		} else {
 			this.banho = "Não selecionado";
 		}
 	}
@@ -61,17 +66,16 @@ public class Atributos extends Petshop {
 	}
 
 	public void setTosa(int opcao) {
-		Integer opcao2 = opcao;
-		String opcao3 = opcao2.toString();
-		if(opcao2 == 1) {
+		if (opcao == 1) {
 			this.tosa = "80";
 			this.preco = preco + 80;
-			}if(opcao2 == 2){
+		}
+		else if (opcao == 2) {
 			this.tosa = "130";
 			this.preco = preco + 130;
-			}else {
-				this.tosa = "Não selecionado";
-			}
+		} else {
+			this.tosa = "Não selecionado";
+		}
 	}
 
 	public String getVacina() {
@@ -79,17 +83,15 @@ public class Atributos extends Petshop {
 	}
 
 	public void setVacina(int opcao) {
-		//Integer opcao2 = opcao;
-		//String opcao3 = opcao2.toString();
-		if(opcao == 1) {
+		if (opcao == 1) {
 			this.vacina = "80";
 			this.preco = preco + 80;
-			}else if(opcao == 2){
+		} else if (opcao == 2) {
 			this.vacina = "130";
 			this.preco = preco + 130;
-			}else {
-				this.vacina = "Não selecionado";
-			}
+		} else {
+			this.vacina = "Não selecionado";
+		}
 	}
 
 }
